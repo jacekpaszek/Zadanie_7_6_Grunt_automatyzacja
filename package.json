@@ -1,0 +1,20 @@
+{
+  "name": "kodilla-grunt-automat",
+  "version": "1.0.0",
+  "description": "First grunt project",
+  "main": "index.js",
+  "scripts": {
+    "test": "kodilla-test"
+  },
+  "keywords": [
+    "grunt"
+  ],
+  "author": "Jacek Paszek",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-sass": "^2.0.0"
+  }
+}
