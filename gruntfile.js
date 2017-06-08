@@ -3,23 +3,23 @@ module.exports = function(grunt) {
   // Project configuration.
   grunt.initConfig({
   sass: {
-      options: {
-        sourceMap: true
-      },
-      dist: {
-        files: {
-          'css/style.css': 'sass/style.sass'
-        }
-      }
+    options: {
+      sourceMap: true
     },
+    dist: {
+      files: {
+        'css/style.css': 'sass/style.sass'
+      }
+    }
+  },
   
   imagemin: {
     dynamic: {
       files: [{
-          expand: true,
-          cwd: 'images/',
-          src: ['**/*.{png,jpg,gif,jpeg}'],
-          dest: 'images/build/'
+        expand: true,
+        cwd: 'images/',
+        src: ['*.{png,jpg,gif,jpeg}'],
+        dest: 'images/build/'
       }]
     }
   },
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
       files: ['sass/*.sass'],
       tasks: ['sass'],
       options: {
-          spawn: false,
+        spawn: false,
       }
     } 
   }
