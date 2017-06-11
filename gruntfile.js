@@ -24,16 +24,6 @@ module.exports = function(grunt) {
     }
   },
 
-  watch: {
-    scripts: {
-      files: ['sass/*.sass'],
-      tasks: ['sass'],
-      options: {
-        spawn: false,
-      }
-    } 
-  },
-
   browserSync: {
             dev: {
                 bsFiles: {
@@ -48,7 +38,17 @@ module.exports = function(grunt) {
                     server: './'
                 }
             }
-        }
+  },
+
+  watch: {
+    scripts: {
+      files: ['sass/*.sass'],
+      tasks: ['sass'],
+      options: {
+        spawn: false,
+      }
+    } 
+  }
   });
 
   // Load the plugins tasks 
@@ -58,5 +58,5 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-browser-sync');
   
   // Default task(s).
-  grunt.registerTask('default', ['sass', 'imagemin', 'watch','browserSync']);
+  grunt.registerTask('default', ['sass', 'imagemin', 'browserSync', 'watch']);
 };
